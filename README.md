@@ -98,6 +98,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
    
    <details>
 	<summary>Dodawanie węzła</summary>
+    
 ![image](https://user-images.githubusercontent.com/80068582/174667100-f9a9957f-83f0-47d4-8d4b-7deae0cbca23.png)
     </details>
     
