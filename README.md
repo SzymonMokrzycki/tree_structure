@@ -96,3 +96,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ![image](https://user-images.githubusercontent.com/80068582/174666614-560031b7-5dee-4444-9af2-242bda1beb20.png)	
    </details>
    
+   <details>
+	<summary>Dodawanie węzła</summary>
+   ![image](https://user-images.githubusercontent.com/80068582/174667100-f9a9957f-83f0-47d4-8d4b-7deae0cbca23.png)
+    </details>
+    
+   <details>
+	<summary>Edytowanie węzła</summary>
+    
+![image](https://user-images.githubusercontent.com/80068582/174667362-847d2334-3e70-4431-9a65-c1ca6f134b24.png)
+   </details>
+   
+   <details>
+	<summary>Przenoszenie węzła</summary>
+    
+![image](https://user-images.githubusercontent.com/80068582/174667469-fa674b93-f334-4aa4-ba3f-ac2afdab6dfc.png)
+   </details>
