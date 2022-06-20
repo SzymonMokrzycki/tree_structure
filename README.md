@@ -62,3 +62,19 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Temat projektu: Mechanizm zarzadzania strukturą drzewiastą
+## Autor: Szymon Mokrzycki
+## Specyfikacja projektu
+
+### Funkcjonalności:
+   1. Logowanie do panelu poprzez podanie loginu oraz hasła, które będą zapisywane w bazie i sprawdzane z nią.
+   2. Rejestracja nowego klienta.
+   3. Dodanie nowego węzła.
+   4. Usuwanie węzłow.
+   5. Edycja wezłów.
+   6. Sortowanie po id rosnąco i malejąco węzłów i liści.
+   7. Przenoszenie węzłów do innych gałęzi.
+   8. Rozwijanie i zwijanie drzewa.
+   
+### Interfejs serwisu
