@@ -82,28 +82,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
        <summary>Ekran główny </summary>
 
 ![image](https://user-images.githubusercontent.com/80068582/174666541-a1654fef-c067-4beb-a026-039380d0aa68.png)
-<p>Strona główna panelu administratora</p>
-	
-![panel_kl](https://user-images.githubusercontent.com/79647437/121525666-eb331d00-c9f8-11eb-861c-5c6bb0f59dbf.PNG)
-	![panel_kl2](https://user-images.githubusercontent.com/79647437/121525723-fbe39300-c9f8-11eb-9064-aa1c4823fba0.PNG)
-<p>Strona główna panelu klienta</p>
-
 
    </details>
 	<details>
        <summary>Ekran logowania</summary>
 
 ![image](https://user-images.githubusercontent.com/80068582/174666471-ead66a7e-30d5-47e4-88df-814811564f08.png)
-
-
-           <p>Panele umożliwiają zalogowanie się do konta administratora i klienta</p>
    </details>
    
    <details>
 	<summary>Ekran rejestracji</summary>
 	
-![image](https://user-images.githubusercontent.com/80068582/174666614-560031b7-5dee-4444-9af2-242bda1beb20.png)
-
-	<p>Umożliwia zarejestrowanie się klienta do serwisu sklepu internetowego</p>	
+![image](https://user-images.githubusercontent.com/80068582/174666614-560031b7-5dee-4444-9af2-242bda1beb20.png)	
    </details>
    
