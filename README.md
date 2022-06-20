@@ -114,15 +114,15 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ![image](https://user-images.githubusercontent.com/80068582/174667469-fa674b93-f334-4aa4-ba3f-ac2afdab6dfc.png)
    </details>
    
-### Użyte technologie
+## Użyte technologie
 
 PHP 8, Laravel 9, JavaScript, JQuery, CSS, Bootstrap, MySQL 5
 
-### Zastosowane narzędzia
+## Zastosowane narzędzia
 
 phpMyAdmin
 
-### Dane połączenia z bazą danych
+## Dane połączenia z bazą danych
 
    1. Host - localhost
    2. user - root
