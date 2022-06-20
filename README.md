@@ -81,7 +81,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
  <details>
        <summary>Ekran główny </summary>
 
-![panel_adm](https://user-images.githubusercontent.com/79647437/121525382-8d063a00-c9f8-11eb-8af6-b84ace2b4750.PNG)
+![image](https://user-images.githubusercontent.com/80068582/174666541-a1654fef-c067-4beb-a026-039380d0aa68.png)
 <p>Strona główna panelu administratora</p>
 	
 ![panel_kl](https://user-images.githubusercontent.com/79647437/121525666-eb331d00-c9f8-11eb-861c-5c6bb0f59dbf.PNG)
@@ -93,8 +93,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 	<details>
        <summary>Ekran logowania</summary>
 
-![admin_login](https://user-images.githubusercontent.com/79647437/115704734-03c57600-a36c-11eb-8908-93d2b89c8a11.PNG)
-![client_login](https://user-images.githubusercontent.com/79647437/115704759-09bb5700-a36c-11eb-93c2-ba64a2785baf.PNG)
+![image](https://user-images.githubusercontent.com/80068582/174666471-ead66a7e-30d5-47e4-88df-814811564f08.png)
+
 
            <p>Panele umożliwiają zalogowanie się do konta administratora i klienta</p>
    </details>
@@ -102,17 +102,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
    <details>
 	<summary>Ekran rejestracji</summary>
 	
-![client_registration](https://user-images.githubusercontent.com/79647437/115704955-3f604000-a36c-11eb-9c7d-de4cf615c381.PNG)
+![image](https://user-images.githubusercontent.com/80068582/174666614-560031b7-5dee-4444-9af2-242bda1beb20.png)
 
 	<p>Umożliwia zarejestrowanie się klienta do serwisu sklepu internetowego</p>	
    </details>
    
-   <details>
-	<summary>Ustawienia danych administratora</summary>
-	
-![ust_admin](https://user-images.githubusercontent.com/79647437/121769848-39196380-cb66-11eb-91ff-49b7dd8c1738.PNG)
-
-	<p>Po przejściu na podstronę ustawienia ze strony głównej użytkownik może dokonać zmiany nazwy użytkownika oraz adresu e-mail</p>
-![hasl_afmin](https://user-images.githubusercontent.com/79647437/121770109-ad083b80-cb67-11eb-8215-63b462fad7cc.PNG)
-	<p>Pod formularzem znajduje się przycisk prowadzący do zmiany hasła, gdzie użytkownik może zmienić swoje hasło</p>
-   </details>
