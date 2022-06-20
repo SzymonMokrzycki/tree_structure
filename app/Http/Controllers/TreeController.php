@@ -3,33 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Node;
+use App\Models\Lef;
 
 class TreeController extends Controller
 {
     public function index()
     {
         return Node::all();
-        return Leaf::all();
     }
- 
+
+    public function sortUp()
+    {
+        Node::orderBy('name', 'ASC');
+        return redirect('/home');
+    }
+
+    public function sortDown()
+    {
+        Node::orderBy('name', 'DESC');
+        return redirect('/home');
+    }
+
     public function showNode($id)
     {
         return Node::find($id);
     }
 
-    public function showLeaf($id)
-    {
-        return Leaf::find($id);
-    }
-
     public function storeNode(Request $request)
     {
-        return Node::create($request->all());
-    }
-
-    public function storeLeaf(Request $request)
-    {
-        return Leaf::create($request->all());
+        Node::create($request->all());
+        return redirect('/home');
     }
 
     public function updateNode(Request $request, $id)
@@ -37,29 +41,13 @@ class TreeController extends Controller
         $node = Node::findOrFail($id);
         $node->update($request->all());
 
-        return $node;
-    }
-
-    public function updateLeaf(Request $request, $id)
-    {
-        $leaf = Leaf::findOrFail($id);
-        $leaf->update($request->all());
-
-        return $leaf;
+        return redirect('/home');
     }
 
     public function deleteNode(Request $request, $id)
     {
         $node = Node::findOrFail($id);
         $node->delete();
-
-        return 204;
-    }
-
-    public function deleteLeaf(Request $request, $id)
-    {
-        $leaf = Leaf::findOrFail($id);
-        $leaf->delete();
 
         return 204;
     }

@@ -25,4 +25,16 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function addNodeView(){
+        return view('add-node');
+    }
+
+    public function editNodeView($name, $id){
+        return view('edit-node', compact('name', 'id'));
+    }
+
+    public function moveNodeView($id){
+        return view('move-node', compact('id'));
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,33 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return redirect('login');
+    return redirect('/login');
 });
 
-Route::middleware('auth::api')
-    ->get('/user', function (Request $request) {
-        return $request->user();
-    });
+Route::get('allnodes', 'TreeController@index');
+Route::get('nodes/{node}', 'TreeController@showNode');
+Route::post('nodescreate', [App\Http\Controllers\TreeController::class, 'storeNode'])->name('create.node');
+Route::post('nodes/{node}', [App\Http\Controllers\TreeController::class, 'updateNode']);
+Route::post('nodes/move/{node}', [App\Http\Controllers\TreeController::class, 'moveNode']);
+Route::delete('nodes/delete/{node}', [App\Http\Controllers\TreeController::class, 'deleteNode']);
+Route::get('sortup', [App\Http\Controllers\TreeController::class, 'sortUp'])->name('sort.up');
+Route::get('sortdown', [App\Http\Controllers\TreeController::class, 'sortDown'])->name('sort.down');
 
-Auth::guard('api')->user(); // instance of the logged user
-Auth::guard('api')->check(); // if a user is authenticated
-Auth::guard('api')->id(); // the id of the authenticated user
+Auth::routes();
 
-Route::post('register', 'Auth\RegisterController@register');
-
-Route::post('login', 'Auth\LoginController@login');
-
-Route::post('logout', 'Auth\LoginController@logout');
-
-Route::group(['middleware' => 'auth::api'], function() {
-    Route::get('tree', 'TreeController@index');
-    Route::get('nodes/{node}', 'TreeController@showNode');
-    Route::get('leafes/{leaf}', 'TreeController@showLeaf');
-    Route::post('nodes', 'TreeController@storeNode');
-    Route::post('leafes', 'TreeController@storeLeaf');
-    Route::put('nodes/{node}', 'TreeController@updateNode');
-    Route::put('leafes/{leaf}', 'TreeController@updateLeaf');
-    Route::delete('nodes/{node}', 'TreeController@deleteNode');
-    Route::delete('leafes/{leaf}', 'TreeController@deleteLeaf');
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/addnodeview', [App\Http\Controllers\HomeController::class, 'addNodeView'])->name('addNode');
+Route::get('/editnodeview/{name}/{id}', [App\Http\Controllers\HomeController::class, 'editNodeView'])->name('editNode');
+Route::get('/movenodeview/{id}', [App\Http\Controllers\HomeController::class, 'moveNodeView'])->name('moveNode');;

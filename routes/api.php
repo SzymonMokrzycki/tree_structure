@@ -3,7 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Node;
-use App\Models\Leaf;
+use App\Models\Lef;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,53 +16,39 @@ use App\Models\Leaf;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::get('tree', function () {
+Route::get('allnodes', function () {
     return Node::all();
-    return Leaf::all();
 });
 
 Route::get('nodes/{id}', function($id) {
     return Node::find($id);
 });
 
-Route::get('leafes/{id}', function($id) {
-    return Leaf::find($id);
-});
-
-Route::post('nodes', function(Request $request) {
+Route::post('nodescreate', function(Request $request) {
     return Node::create($request->all);
 });
 
-Route::post('leafes', function(Request $request) {
-    return Leaf::create($request->all);
-});
-
-Route::put('nodes/{id}', function(Request $request, $id) {
+Route::post('nodes/{id}', function(Request $request, $id) {
     $node = Node::findOrFail($id);
     $node->update($request->all());
 
-    return $node;
+    return redirect("/home");
 });
 
-Route::put('leafes/{id}', function(Request $request, $id) {
-    $leaf = Leaf::findOrFail($id);
-    $leaf->update($request->all());
-
-    return $leaf;
-});
-
-Route::delete('nodes/{id}', function($id) {
+Route::delete('nodes/delete/{id}', function($id) {
     Node::find($id)->delete();
 
     return 204;
 });
 
-Route::delete('leafes/{id}', function($id) {
-    Leaf::find($id)->delete();
-
-    return 204;
+Route::get('sortup', function (){
+    Node::orderBy('name', 'ASC');
+    return redirect('/home');
 });
+
+Route::get('sortdown', function (){
+    Node::orderBy('name', 'DESC');
+    return redirect('/home');
+});
+
+

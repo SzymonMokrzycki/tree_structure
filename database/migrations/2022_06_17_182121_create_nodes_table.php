@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('nodes', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("file_type");
-            $table->boolean("root");
-            $table->integer("id_precedent");
-            $table->integer("id_subordinate");
+            $table->string("name")->default("");
+            $table->string("file_type")->default("");
+            $table->boolean("root")->default(0);
+            $table->integer("id_precedent")->nullable();
+            $table->boolean("subordinate")->default(0);
             $table->timestamps();
         });
     }

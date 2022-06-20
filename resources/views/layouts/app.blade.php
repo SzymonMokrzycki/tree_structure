@@ -15,11 +15,13 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body>
+<body onload="tree();">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -79,5 +81,39 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script>
+    $(function () {
+        // 6 create an instance when the DOM is ready
+        // 7 bind to events triggered on the tree
+        $('#jstree').on("changed.jstree", function (e, data) {
+            console.log(data.selected);
+            var t = $('#jstree').jstree('get_selected', true)[0].text;
+            document.getElementById('bd').setAttribute("onclick", "del('"+ t +"')");
+            document.getElementById('bd').disabled = false;
+            document.getElementById('be').disabled = false;
+            document.getElementById('bm').disabled = false;
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8000/api/allnodes",
+                success: function (data) {
+                    if(data != ""){
+                        $.each(data, function (k, n){
+                            if(n.name == t){
+                                idd = n.id;
+                            }
+                        });
+                        var s = '/editnodeview/'+t+'/'+idd;
+                        var s1 = '/movenodeview/'+idd;
+                        document.getElementById('ae').setAttribute("href", s);
+                        document.getElementById('am').setAttribute("href", s1);
+                    }
+                }   
+            });
+        });
+    });
+    </script>
+    <script src="{{url('js/displayTree.js')}}"></script>
 </body>
 </html>

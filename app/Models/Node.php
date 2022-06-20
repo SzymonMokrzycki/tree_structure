@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Node extends Model
 {
     use HasFactory;
+    protected $fillable = ['name', 'file_type', 'root', 'id_precedent', 'subordinate'];  
 }
