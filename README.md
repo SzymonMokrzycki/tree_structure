@@ -129,3 +129,8 @@ phpMyAdmin
    3. password - ""
    4. dbname - drzewo_laravel
    
+   
+   
+
+
+
